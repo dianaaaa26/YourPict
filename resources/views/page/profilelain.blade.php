@@ -5,9 +5,8 @@
 @section('contentlayout')
     <section class="mt-32">
         <div class="flex flex-col max-w-screen-xl gap-2 p-14 mx-auto bg-slate-00">
-            <div class="mx-auto">
-                <img src="" id="profil" class="rounded-full h-52 w-52 overflow-hidden items-center" alt=""
-                    id="imguser" />
+            <div class="mx-auto w-52 h-52 overflow-hidden rounded-full bg-gray-200 ">
+                <img src="" id="profil" class="w-full h-full" alt="" id="imguser" />
             </div>
             <div class="mx-auto">
                 <span class="text-3xl font-bold" id="username"></span>

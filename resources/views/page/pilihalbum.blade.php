@@ -8,9 +8,9 @@
             </a>
         </div>
         <div class="flex flex-col max-w-screen-lg mx-auto bg-slate-00 h-52 gap-6">
+            @foreach ($albums as $album)
             <form action="/editalbum/{{ $dataFoto->id }}" method="post">
                 @csrf
-                @foreach ($albums as $album)
                     <div class="flex gap-6">
                         <div class="h-40 w-40">
                             <img src="{{ asset('/asset/' . $album->foto) }} " class="w-full h-full rounded-2xl"

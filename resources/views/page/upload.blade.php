@@ -8,28 +8,38 @@
                     @csrf
                     <div class="flex">
                         <div class="w-1/2 p-5">
-                            <div class="flex items-center justify-center w-full">
-                                <label for="dropzone-file"
-                                    class="flex flex-col items-center justify-center w-full h-80 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
-                                    <div class="flex flex-col items-center justify-center pt-5 pb-6">
-                                        <svg class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                                stroke-width="2"
-                                                d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
-                                        </svg>
-                                        <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
-                                            <span class="font-semibold">Click to upload</span> or drag
-                                            and drop
-                                        </p>
-                                        <p class="text-xs text-gray-500 dark:text-gray-400">
-                                            SVG, PNG, JPG or GIF (MAX. 800x400px)
-                                        </p>
+                            <div x-data="{ photoName: null, photoPreview: null }" class="col-span-6 ml-2 sm:col-span-4 md:mr-3">
+                                <!-- Photo File Input -->
+                                <input type="file" name="up" class="hidden" x-ref="photo"
+                                    x-on:change="
+                                                      photoName = $refs.photo.files[0].name;
+                                                      const reader = new FileReader();
+                                                      reader.onload = (e) => {
+                                                          photoPreview = e.target.result;
+                                                      };
+                                                      reader.readAsDataURL($refs.photo.files[0]);
+                                  ">
+
+                                <div class="text-center">
+                                    <!-- Current Profile Photo -->
+                                    <div class="mt-2" x-show="! photoPreview">
+                                        <img src="/asset/default_image.png"
+                                            class="max-w-[480px] max-h-[470px] w-full h-full m-auto shadow">
                                     </div>
-                                    <input type="file" class="hidden" multiple accept="image/*" id="dropzone-file"
-                                        name="up" />
-                                    <div id="imagePreview" class="z-30 flex gap-3 w-full h-80"></div>
-                                </label>
+                                    <!-- New Profile Photo Preview -->
+                                    <div class="mt-2" x-show="photoPreview" style="display: none;">
+                                        <span class="block max-w-[480px] max-h-[470px] w-auto h-80 m-auto shadow"
+                                            x-bind:style="'background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url(\'' +
+                                            photoPreview + '\');'"
+                                            style="background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url('null');">
+                                        </span>
+                                    </div>
+                                    <button type="button"
+                                        class=" inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-md font-semibold text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-400 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150 mt-2 ml-3"
+                                        x-on:click.prevent="$refs.photo.click()">
+                                        Tambahkan Foto <i class=" bi bi-cloud-arrow-up text-2xl px-3"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                         <div class="w-1/2">

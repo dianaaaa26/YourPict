@@ -5,9 +5,6 @@
             <div class="flex flex-col">
                 <div class="font-bold text-3xl px-5">Ubah Password</div>
                 <div class="flex items-center">
-                    @if (session()->has('success'))
-                        <h1>{{ session('success') }}</h1>
-                    @endif
                     <form action="/updatepassword" method="post">
                         @csrf
                         <div class="w-1/2">
@@ -48,5 +45,7 @@
                 </div>
             </div>
         </div>
+        @include('sweetalert::alert')
+
     </section>
 @endsection

@@ -75,8 +75,17 @@
                 </div>
             </div>
         </div>
+        @include('sweetalert::alert')
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+    <script>
+        Swal.fire({
+            title: 'Selamat Datang {{ $user->nama_lengkap }}!',
+            text: 'Anda Berhasil login sebagai user',
+            icon: 'success',
+            confirmButtonText: 'OK'
+        });
+    </script>
 @endsection
 @push('footerjsexternal')
     <script src="/javascript/explore.js"></script>

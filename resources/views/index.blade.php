@@ -1,9 +1,9 @@
 @extends('layout.navbar')
 @section('contentlogin')
     <section class="mt-32">
-        <div id="gallery" class="relative w-full" data-carousel="slide">
+        <div id="gallery" class="relative w-full overflow-x-scrol-hidden" data-carousel="slide">
             <!-- Carousel wrapper -->
-            <div class="relative h-56 rounded-lg md:h-96">
+            <div class="relative h-56 rounded-lg md:h-96 ">
                 <!-- Item 1 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
                     <img src="/asset/hero_2.jpg"
@@ -123,8 +123,8 @@
     <section class="mt-16">
         <div class="flex flex-col mb-5">
             <!-- <div class="bg-black w-full h-[640px]">
-                                                                                          <img src="/asset/intro-bg.jpg" class="bg-cover mix-blend-screen" />
-                                                                                        </div> -->
+                                                                                                          <img src="/asset/intro-bg.jpg" class="bg-cover mix-blend-screen" />
+                                                                                                        </div> -->
             <div class="flex justify-between p-20 mt-44" id="about">
                 <div class="flex flex-col">
                     <div class="text-5xl">
@@ -132,44 +132,44 @@
                         <span class="font-fontutama text-red-600">YourPict</span>
                     </div>
                     <div class="w-[668px] h-[243px] mt-6" ">
-                                                                                              Unggah dan simpan foto moment anda, temukan berbagai teman Ayo
-                                                                                              temukan berbagai foto menarik lainya hanya di YourPict
-                                                                                            </div>
-                                                                                          </div>
-                                                                                          <div class=" bg-gray-400 w-[288px] h-[223px] overflow-hidden">
-                                                                                            <img src="/asset/img_2_sq.jpg" alt="" />
-                                                                                          </div>
-                                                                                        </div>
+                                                                                                              Unggah dan simpan foto moment anda, temukan berbagai teman Ayo
+                                                                                                              temukan berbagai foto menarik lainya hanya di YourPict
+                                                                                                            </div>
+                                                                                                          </div>
+                                                                                                          <div class=" bg-gray-400 w-[288px] h-[223px] overflow-hidden">
+                                                                                                            <img src="/asset/img_2_sq.jpg" alt="" />
+                                                                                                          </div>
+                                                                                                        </div>
 
 
-                                                                                        <h1 class="text-center text-5xl font-fontutama ">Temukan Berbagai Kategori</h1>
-                                                                                        <div class="flex gap-7 p-5 justify-center">
+                                                                                                        <h1 class="text-center text-5xl font-fontutama ">Temukan Berbagai Kategori</h1>
+                                                                                                        <div class="flex gap-7 p-5 justify-center">
 
-                                                                                          <div class="flex flex-col gap-7">
+                                                                                                          <div class="flex flex-col gap-7">
 
-                                                                                            <div class="bg-slate-300 w-[383px] h-[282px] rounded-xl overflow-hidden">
-                                                                                              <img src="/asset/b.jpeg" alt="" class="transition duration-500 ease-in-out hover:scale-105 w-full h-full" />
+                                                                                                            <div class="bg-slate-300 w-[383px] h-[282px] rounded-xl overflow-hidden">
+                                                                                                              <img src="/asset/b.jpeg" alt="" class="transition duration-500 ease-in-out hover:scale-105 w-full h-full" />
 
-                                                                                            </div>
-                                                                                            <div class="bg-yellow-300 w-[383px] h-[282px] rounded-xl overflow-hidden">
-                                                                                              <img src="/asset/img_5_sq.jpg" alt="" class="transition duration-500 ease-in-out hover:scale-105" />
-                                                                                            </div>
-                                                                                          </div>
-                                                                                          <div class="bg-green-300 w-[341px] h-[586px] rounded-xl overflow-hidden">
-                                                                                            <img src="/asset/img_1_vertical.jpg" class="h-full transition duration-500 ease-in-out hover:scale-105"
-                                                                                              alt="" />
-                                                                                          </div>
-                                                                                          <div class="flex flex-col gap-7">
-                                                                                            <div class="bg-slate-300 w-[383px] h-[282px] rounded-xl overflow-hidden">
-                                                                                              <img src="/asset/img_4_sq.jpg" class="transition duration-500 ease-in-out hover:scale-105" alt="" />
-                                                                                            </div>
-                                                                                            <div class="bg-yellow-300 w-[383px] h-[282px] rounded-xl overflow-hidden">
-                                                                                              <img src="/asset/img_7_sq.jpg" class="transition duration-500 ease-in-out hover:scale-105" alt="" />
-                                                                                            </div>
-                                                                                          </div>
-                                                                                        </div>
-                                                                                      </div>
-                                                                                    </section>
+                                                                                                            </div>
+                                                                                                            <div class="bg-yellow-300 w-[383px] h-[282px] rounded-xl overflow-hidden">
+                                                                                                              <img src="/asset/img_5_sq.jpg" alt="" class="transition duration-500 ease-in-out hover:scale-105" />
+                                                                                                            </div>
+                                                                                                          </div>
+                                                                                                          <div class="bg-green-300 w-[341px] h-[586px] rounded-xl overflow-hidden">
+                                                                                                            <img src="/asset/img_1_vertical.jpg" class="h-full transition duration-500 ease-in-out hover:scale-105"
+                                                                                                              alt="" />
+                                                                                                          </div>
+                                                                                                          <div class="flex flex-col gap-7">
+                                                                                                            <div class="bg-slate-300 w-[383px] h-[282px] rounded-xl overflow-hidden">
+                                                                                                              <img src="/asset/img_4_sq.jpg" class="transition duration-500 ease-in-out hover:scale-105" alt="" />
+                                                                                                            </div>
+                                                                                                            <div class="bg-yellow-300 w-[383px] h-[282px] rounded-xl overflow-hidden">
+                                                                                                              <img src="/asset/img_7_sq.jpg" class="transition duration-500 ease-in-out hover:scale-105" alt="" />
+                                                                                                            </div>
+                                                                                                          </div>
+                                                                                                        </div>
+                                                                                                      </div>
+                                                                                                    </section>
 
-                                                                                    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+                                                                                                    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
 @endsection

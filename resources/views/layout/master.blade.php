@@ -13,6 +13,10 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
 
     <link rel="icon" href="/asset/icon.png">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/alpine-collective/alpine-magic-helpers@0.3.x/dist/index.js"></script>
+
     <title>YourPict</title>
     @stack('cssjsexternal')
     @push('cssjsexternal')
@@ -283,6 +287,9 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   
+
     <script>
         const notifDel = document.getElementById('toast-interactive');
 
@@ -294,6 +301,7 @@
     @push('footerjsexternal')
         <script src="/javascript/exploredetail.js"></script>
     @endpush
+    
 
 
 

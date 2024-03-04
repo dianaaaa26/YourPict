@@ -53,7 +53,7 @@ class UserController extends Controller
             'tgl_lahir' => $request->tgllahir,
         ]);
         // return redirect('/profile/{id}');
-        return redirect('/profile' . '/' . Auth::user()->id);
+        return redirect('/profile' . '/' . Auth::user()->id)->with('success', 'Profil Berhasil diubah!');
     }
 
 
@@ -82,7 +82,7 @@ class UserController extends Controller
             $user->update([
                 'password' => Hash::make($request->password_baru)
             ]);
-            return redirect()->back()->with('success', 'berhasil diperbarui');
+            return redirect()->back()->with('success', 'Password Berhasil diubah!');
         }
 
     }

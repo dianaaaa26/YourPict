@@ -55,7 +55,8 @@ class AuthController extends Controller
 
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             $request->session()->regenerate();
-            return redirect('/dashboard');
+            $user = Auth::user();
+            return redirect('/dashboard')->with('success', 'Password Berhasil diubah!');
         } else {
             return redirect()->back()->with('error', 'email atau password salah');
 
